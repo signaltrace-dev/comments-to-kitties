@@ -2,15 +2,19 @@
   "manifest_version": 2,
 
   "name": "Comments to Kitties",
-  "description": "Replaces comments with pictures of cute cat. Can't you just feel your faith in humanity being restored already?",
+  "description": "Replaces comments with pictures of cute cats. Can't you just feel your faith in humanity being restored already?",
   "version": "1.0",
   "browser_action" : {
     "default_title": "Change comments to kitties"
   },
-  "background" : {
-    "scripts" : ["background.js"]
-  },
-
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-2.2.3.min.js", "ctk.js"],
+      "css": ["ctk.css"],
+      "run_at": "document_end"
+    }
+  ],
   "permissions": [
     "activeTab",
     "https://ajax.googleapis.com/"

@@ -1,0 +1,8 @@
+#comment-kitties{
+  text-align: center;
+}
+
+#comment-kitties img {
+    margin: 10px auto;
+    display: block;
+}

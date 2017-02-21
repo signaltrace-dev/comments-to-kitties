@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
   var hideComments = function(){
     var urls = [];
 
@@ -39,7 +38,5 @@ $(document).ready(function(){
       hideComments();
     }
   }, 1000);
-
-
 
 });
